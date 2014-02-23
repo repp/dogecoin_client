@@ -64,7 +64,7 @@ end
 <th> Method </th>
 <th> Params </th>
 <th> Description </th>
-<th> Needs unlocked wallet?
+<th>unlckd wallet req?
 </th></tr>
 <tr>
 <td> add_multi_sig_address </td>
