@@ -44,11 +44,17 @@ client = DogecoinClient.new(user: 'my_dogecoind_username', password: 'my_super_s
 # create a new instance of the client
 client = DogecoinClient.new
 
-# get a new wallet address
-new_wallet_addr = client.get_new_address
+# check that dogecoind is running and that our credentials are correct
+if client.valid?
 
-# get the balance of our new wallet
-client.get_balance(new_wallet_addr) # returns '0.00'
+    # get a new wallet address
+    new_wallet_addr = client.get_new_address
+
+    # get the balance of our new wallet
+    client.get_balance(new_wallet_addr) # returns '0.00'
+else
+    puts 'Something is wrong...'
+end
 ```
 
 ## Available Methods
