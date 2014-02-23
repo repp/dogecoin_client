@@ -11,17 +11,6 @@ describe DogecoinClient::Client do
     DogecoinClient::Client.new(user: 'dogecoinrpc', password: '5d36c07c20a43a281f54c07d72ce78cc')
   end
 
-  it "client options are getting set successfully" do
-    client = DogecoinClient::Client.new
-    client.options.should eql(DogecoinClient::Client::DEFAULTS)
-
-    client2 = DogecoinClient::Client.new(user: 'ryan', password: 'password')
-    expected = DogecoinClient::Client::DEFAULTS
-    expected[:user] = 'ryan'
-    expected[:password] = 'password'
-    client2.options.should eql(expected)
-  end
-
   it 'rejects bad credentials' do
     bad_client = DogecoinClient::Client.new(user: 'bad_username', password: 'bad_password')
     bad_client.valid?.should eql(false)

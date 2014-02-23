@@ -1,6 +1,7 @@
 require 'net/http'
 require 'uri'
 require 'json'
+require 'dogecoin_client'
 require 'dogecoin_client/methods'
 require 'errors/http_error'
 require 'errors/rpc_error'
@@ -12,17 +13,8 @@ module DogecoinClient
 
     attr_accessor :options
 
-    DEFAULTS = {
-        host:    'localhost',
-        port:    22555,
-        method:  :post,
-        protocol: :http,
-        user:    '',
-        password:    '',
-    }
-
     def initialize(options = {})
-      @options = DEFAULTS.merge(options)
+      @options = get_defaults.merge(options)
     end
 
     def valid?
@@ -67,6 +59,13 @@ module DogecoinClient
 
     def de_ruby_style(method_name)
        method_name.to_s.tr('_', '').downcase.to_sym
+    end
+
+    def get_defaults
+      DogecoinClient.configuration.instance_variables.each.inject({}) {|hash, var|
+        hash[var.to_s.delete('@').to_sym] = DogecoinClient.configuration.instance_variable_get(var);
+        hash
+      }
     end
 
   end
