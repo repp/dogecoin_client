@@ -67,109 +67,109 @@ end
 <th> Needs unlocked wallet?
 </th></tr>
 <tr>
-<td> addmultisigaddress </td>
+<td> add_multi_sig_address </td>
 <td> [nrequired] ["key","key"] [account] </td>
 <td> <b>Currently only available on testnet</b> Add a nrequired-to-sign multisignature address to the wallet. Each key is a dogecoin address or hex-encoded public key. If [account] is specified, assign address to [account]. </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> backupwallet </td>
+<td> backup_wallet </td>
 <td> [destination] </td>
 <td> Safely copies wallet.dat to destination, which can be a directory or a path with filename. </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> dumpprivkey </td>
+<td> dump_priv_key </td>
 <td> [dogecoinaddress] </td>
 <td> Reveals the private key corresponding to <dogecoinaddress< </td>
-<td> Y
+<td> Yes
 </td></tr>
 <tr>
-<td> encryptwallet </td>
+<td> encrypt_wallet </td>
 <td> [passphrase] </td>
 <td> Encrypts the wallet with <passphrase<. </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> getaccount </td>
+<td> get_account </td>
 <td> [dogecoinaddress] </td>
 <td> Returns the account associated with the given address. </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> getaccountaddress </td>
+<td> get_account_address </td>
 <td> [account] </td>
 <td> Returns the current dogecoin address for receiving payments to this account. </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> getaddressesbyaccount </td>
+<td> get_addresses_by_account </td>
 <td> [account] </td>
 <td> Returns the list of addresses for the given account. </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> getbalance </td>
+<td> get_balance </td>
 <td> [account] [minconf=1] </td>
 <td> If [account] is not specified, returns the server's total available balance.<br />If [account] is specified, returns the balance in the account. </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> getblock </td>
+<td> get_block </td>
 <td> [hash] </td>
 <td> Returns information about the given block hash. </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> getblockcount </td>
+<td> get_block_count </td>
 <td> </td>
 <td> Returns the number of blocks in the longest block chain. </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> getblockhash </td>
+<td> get_block_hash </td>
 <td> [index] </td>
 <td> Returns hash of block in best-block-chain at <index< </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> getblocknumber </td>
+<td> get_block_number </td>
 <td> </td>
 <td> <b>Deprecated</b>. Use getblockcount. </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> getconnectioncount </td>
+<td> get_connection_count </td>
 <td> </td>
 <td> Returns the number of connections to other nodes. </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> getdifficulty </td>
+<td> get_difficulty </td>
 <td> </td>
 <td> Returns the proof-of-work difficulty as a multiple of the minimum difficulty. </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> getgenerate </td>
+<td> get_generate </td>
 <td> </td>
 <td> Returns true or false whether dogecoind is currently generating hashes </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> gethashespersec </td>
+<td> get_hashes_per_sec </td>
 <td> </td>
 <td> Returns a recent hashes per second performance measurement while generating. </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> getinfo </td>
+<td> get_info </td>
 <td> </td>
 <td> Returns an object containing various state info. </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> getmemorypool </td>
+<td> get_memory_pool </td>
 <td> [data] </td>
 <td> If [data] is not specified, returns data needed to construct a block to work on:
 <ul><li> "version": block version
@@ -182,10 +182,10 @@ end
 <p>If [data] is specified, tries to solve the block and returns true if it was successful.
 </p>
 </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> getmininginfo </td>
+<td> get_mining_info </td>
 <td> </td>
 <td> Returns an object containing mining-related information:
 <ul><li> blocks
@@ -200,28 +200,28 @@ end
 </li><li> testnet
 </li></ul>
 </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> getnewaddress </td>
+<td> get_new_address </td>
 <td> [account] </td>
 <td> Returns a new dogecoin address for receiving payments.  If [account] is specified (recommended), it is added to the address book so payments received with the address will be credited to [account]. </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> getreceivedbyaccount </td>
+<td> get_received_by_account </td>
 <td> [account] [minconf=1] </td>
 <td> Returns the total amount received by addresses with [account] in transactions with at least [minconf] confirmations. If [account] not provided return will include all transactions to all accounts. (version 0.3.24-beta) </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> getreceivedbyaddress </td>
+<td> get_received_by_address </td>
 <td> [dogecoinaddress] [minconf=1] </td>
 <td> Returns the total amount received by <dogecoinaddress< in transactions with at least [minconf] confirmations. While some might consider this obvious, value reported by this only considers *receiving* transactions. It does not check payments that have been made *from* this address. In other words, this is not "getaddressbalance". Works only for addresses in the local wallet, external addresses will always show 0. </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> gettransaction </td>
+<td> get_transaction </td>
 <td> [txid] </td>
 <td> Returns an object about the given transaction containing:
 <ul><li> "amount": total amount of the transaction
@@ -236,10 +236,10 @@ end
 </li></ul>
 </li></ul>
 </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> getwork </td>
+<td> get_work </td>
 <td> [data] </td>
 <td> If [data] is not specified, returns formatted hash data to work on:
 <ul><li> "midstate": precomputed hash state after hashing the first half of the data
@@ -250,34 +250,34 @@ end
 <p>If [data] is specified, tries to solve the block and returns true if it was successful.
 </p>
 </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
 <td> help </td>
 <td> [command] </td>
 <td> List commands, or get help for a command. </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> importprivkey </td>
+<td> import_priv_key </td>
 <td> [dogecoinprivkey] [label] </td>
 <td> Adds a private key (as returned by dumpprivkey) to your wallet. </td>
-<td> Y
+<td> Yes
 </td></tr>
 <tr>
-<td> keypoolrefill </td>
+<td> key_pool_refill </td>
 <td> </td>
 <td> Fills the keypool, requires wallet passphrase to be set. </td>
-<td> Y
+<td> Yes
 </td></tr>
 <tr>
-<td> listaccounts </td>
+<td> list_accounts </td>
 <td> [minconf=1] </td>
 <td> Returns Object that has account names as keys, account balances as values. </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> listreceivedbyaccount </td>
+<td> list_received_by_account </td>
 <td> [minconf=1] [includeempty=false] </td>
 <td> Returns an array of objects containing:
 <ul><li> "account": the account of the receiving addresses
@@ -285,10 +285,10 @@ end
 </li><li> "confirmations": number of confirmations of the most recent transaction included
 </li></ul>
 </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> listreceivedbyaddress </td>
+<td> list_received_by_address </td>
 <td> [minconf=1] [includeempty=false] </td>
 <td> Returns an array of objects containing:
 <ul><li> "address": receiving address
@@ -299,107 +299,109 @@ end
 <p>To get a list of accounts on the system, execute dogecoind listreceivedbyaddress 0 true
 </p>
 </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> listsinceblock</td>
+<td> list_since_block</td>
 <td> [blockhash] [target-confirmations] </td>
 <td> Get all transactions in blocks since block [blockhash], or all transactions if omitted. </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> listtransactions </td>
+<td> list_transactions </td>
 <td> [account] [count=10] [from=0] </td>
 <td> Returns up to [count] most recent transactions skipping the first [from] transactions for account [account]. If [account] not provided will return recent transaction from all accounts.
 </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
 <td> move </td>
 <td> [fromaccount] [toaccount] [amount] [minconf=1] [comment] </td>
 <td> Move from one account in your wallet to another </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> sendfrom </td>
+<td> send_from </td>
 <td> [fromaccount] [todogecoinaddress] [amount] [minconf=1] [comment] [comment-to] </td>
 <td> <amount< is a real and is rounded to 8 decimal places. Will send the given amount to the given address, ensuring the account has a valid balance using [minconf] confirmations. Returns the transaction ID if successful (not in JSON object). </td>
-<td> Y
+<td> Yes
 </td></tr>
 <tr>
-<td> sendmany </td>
+<td> send_many </td>
 <td> [fromaccount] [address:amount,...] [minconf=1] [comment] </td>
 <td> amounts are double-precision floating point numbers </td>
-<td> Y
+<td> Yes
 </td></tr>
 <tr>
-<td> sendtoaddress </td>
+<td> send_to_address </td>
 <td> [dogecoinaddress] [amount] [comment] [comment-to] </td>
 <td> <amount< is a real and is rounded to 8 decimal places. Returns the transaction ID <txid< if successful. </td>
-<td> Y
+<td> Yes
 </td></tr>
 <tr>
-<td> setaccount </td>
+<td> set_account </td>
 <td> [dogecoinaddress] [account] </td>
 <td> Sets the account associated with the given address. Assigning address that is already assigned to the same account will create a new address associated with that account. </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> setgenerate </td>
+<td> set_generate </td>
 <td> [generate] [genproclimit] </td>
 <td> [generate] is true or false to turn generation on or off.
 
 Generation is limited to [genproclimit] processors, -1 is unlimited. </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> signmessage </td>
+<td> sign_message </td>
 <td> [dogecoinaddress] [message] </td>
 <td> Sign a message with the private key of an address. </td>
-<td> Y
+<td> Yes
 </td></tr>
 <tr>
-<td> settxfee </td>
+<td> set_tx_fee </td>
 <td> [amount] </td>
 <td> [amount] is a real and is rounded to the nearest 0.00000001 </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
 <td> stop </td>
 <td> </td>
 <td> Stop dogecoin server. </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> validateaddress </td>
+<td> validate_address </td>
 <td> [dogecoinaddress] </td>
 <td> Return information about [dogecoinaddress]. </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> verifymessage </td>
+<td> verify_message </td>
 <td> [dogecoinaddress] [signature] [message] </td>
 <td> Verify a signed message. </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> walletlock </td>
+<td> wallet_lock </td>
 <td>  </td>
 <td> Removes the wallet encryption key from memory, locking the wallet. After calling this method,  you will need to call walletpassphrase again before being able to call any methods which require the wallet to be unlocked. </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> walletpassphrase </td>
+<td> wallet_passphrase </td>
 <td> [passphrase] [timeout] </td>
 <td> Stores the wallet decryption key in memory for <timeout< seconds. </td>
-<td> N
+<td> No
 </td></tr>
 <tr>
-<td> walletpassphrasechange </td>
+<td> wallet_passphrase_change </td>
 <td> [oldpassphrase] [newpassphrase] </td>
 <td> Changes the wallet passphrase from <oldpassphrase< to <newpassphrase<. </td>
-<td> N
+<td> No
 </td></tr></table>
+
+*Table stolen from [node-dogecoin](https://github.com/countable/node-dogecoin)
 
 ## Contributing
 
