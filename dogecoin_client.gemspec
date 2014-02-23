@@ -7,9 +7,9 @@ Gem::Specification.new do |spec|
   spec.name          = "dogecoin_client"
   spec.version       = DogecoinClient::VERSION
   spec.authors       = ["Ryan Epp"]
-  spec.email         = ["repp@redtettemer.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.email         = ["hey@ryanepp.com"]
+  spec.description   = %q{A Dogecoin client for ruby. This gem is a ruby wrapper for making remote procedure calls (rpc) to a dogecoin daemon (dogecoind.)}
+  spec.summary       = %q{DogecoinClient is a gem that makes it easy to work with dogecoin in ruby.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
