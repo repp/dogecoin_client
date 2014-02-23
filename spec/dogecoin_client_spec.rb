@@ -28,4 +28,11 @@ describe DogecoinClient do
     client.valid?.should eql(true)
   end
 
+  it 'using results as args' do
+    client = valid_client
+    new_wallet_addr = client.get_new_address
+    my_balance = client.get_balance(new_wallet_addr)
+    my_balance.should eql(0.0)
+  end
+
 end

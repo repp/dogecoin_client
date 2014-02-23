@@ -46,12 +46,12 @@ client = DogecoinClient.new
 
 # check that dogecoind is running and that our credentials are correct
 if client.valid?
-
     # get a new wallet address
     new_wallet_addr = client.get_new_address
 
     # get the balance of our new wallet
-    client.get_balance(new_wallet_addr) # returns '0.00'
+    my_balance = client.get_balance(new_wallet_addr)
+    puts "I have #{my_balance} doge!"
 else
     puts 'Something is wrong...'
 end
@@ -62,6 +62,8 @@ end
 
 
 ## Contributing
+
+For local testing, make sure to replace the user/password in `spec/client_spec.rb` and `spec/dogecoin_client_spec.rb` with the credentials for your local dogecoind.
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
