@@ -1,6 +1,11 @@
 # DogecoinClient
 
-TODO: Write a gem description
+DogecoinClient is a gem that makes it easy to work with dogecoin in ruby.
+
+## Dependencies
+
+The only requirement is a running dogecoin daemon ([dogecoind](https://github.com/dogecoin/dogecoin)). Make sure to check out the [doc section](https://github.com/dogecoin/dogecoin/tree/master-1.5/doc) and follow the instructions for your os.
+NOTICE: by default dogecoind will only allow local connections.
 
 ## Installation
 
@@ -8,13 +13,30 @@ Add this line to your application's Gemfile:
 
     gem 'dogecoin_client'
 
-And then execute:
-
-    $ bundle
-
 Or install it yourself as:
 
     $ gem install dogecoin_client
+
+## Configuration
+
+If you're using rails you can create an initializer. These are the default settings:
+
+```ruby
+# config/initializers/dogecoin_client.rb
+DogecoinClient.configure do |config|
+    config.host = 'localhost'
+    config.port = 22555
+    config.protocol = :http
+    config.user = ''
+    config.password = ''
+end
+```
+
+You can also pass config variables as an options hash when creating a new client:
+
+```ruby
+client = DogecoinClient.new(user: 'my_dogecoind_username', password: 'my_super_secure_password')
+```
 
 ## Usage
 
@@ -27,3 +49,7 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## Wait, couldn't I just use a client for bitcoin or litecoin?
+
+Perhaps, but this way you don't need to worry about any current or future api inconsistencies. Plus, why use a tool built for an inferior alt coin?
