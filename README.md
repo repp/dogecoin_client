@@ -19,7 +19,7 @@ Or install it yourself as:
 
 ## Configuration
 
-If you're using rails you can create an initializer. These are the default settings:
+If you're using rails you can create an initializer. Here are the default settings:
 
 ```ruby
 # config/initializers/dogecoin_client.rb
@@ -38,9 +38,22 @@ You can also pass config variables as an options hash when creating a new client
 client = DogecoinClient.new(user: 'my_dogecoind_username', password: 'my_super_secure_password')
 ```
 
-## Usage
+## Example Usage
 
-TODO: Write usage instructions here
+```ruby
+# create a new instance of the client
+client = DogecoinClient.new
+
+# get a new wallet address
+new_wallet_addr = client.get_new_address
+
+# get the balance of our new wallet
+client.get_balance(new_wallet_addr) # returns '0.00'
+```
+
+## Available Methods
+
+
 
 ## Contributing
 
@@ -50,6 +63,6 @@ TODO: Write usage instructions here
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
-## Wait, couldn't I just use a client for bitcoin or litecoin?
+## Can't I just use a client for bitcoin or litecoin?
 
 Perhaps, but this way you don't need to worry about any current or future api inconsistencies. Plus, why use a tool built for an inferior alt coin?
