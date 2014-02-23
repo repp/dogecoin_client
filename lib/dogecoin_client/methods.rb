@@ -1,4 +1,4 @@
-module DogecoinClient
+class DogecoinClient
   METHODS = %w(
      add_multi_sig_address
      backup_wallet

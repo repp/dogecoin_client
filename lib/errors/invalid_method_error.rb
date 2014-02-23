@@ -1,4 +1,4 @@
-module DogecoinClient
+class DogecoinClient
   class InvalidMethodError < StandardError
 
     attr_accessor :message

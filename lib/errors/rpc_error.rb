@@ -1,4 +1,4 @@
-module DogecoinClient
+class DogecoinClient
   class RPCError < StandardError
 
     attr_accessor :message

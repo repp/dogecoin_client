@@ -1,4 +1,4 @@
-module DogecoinClient
+class DogecoinClient
   class HTTPError < StandardError
 
     attr_accessor :object, :message

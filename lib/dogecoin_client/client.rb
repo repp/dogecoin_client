@@ -8,7 +8,7 @@ require 'errors/rpc_error'
 require 'errors/invalid_method_error'
 
 
-module DogecoinClient
+class DogecoinClient
   class Client
 
     attr_accessor :options
