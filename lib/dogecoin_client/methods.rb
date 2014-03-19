@@ -2,7 +2,7 @@ class DogecoinClient
   METHODS = %w(
      add_multi_sig_address
      backup_wallet
-     create_raw_transaction 
+     create_raw_transaction
      decode_raw_transaction
      dump_priv_key
      encrypt_wallet
@@ -26,7 +26,7 @@ class DogecoinClient
      get_received_by_address
      get_transaction
      get_work
-     help 
+     help
      import_priv_key
      key_pool_refill
      list_accounts
@@ -35,7 +35,7 @@ class DogecoinClient
      list_since_block
      list_transactions
      list_unspent
-     move 
+     move
      send_from
      send_many
      send_raw_transaction
@@ -45,7 +45,7 @@ class DogecoinClient
      set_tx_fee
      sign_message
      sign_raw_transaction
-     stop 
+     stop
      validate_address
      verify_message
      wallet_lock
