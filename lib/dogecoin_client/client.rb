@@ -30,22 +30,23 @@ class DogecoinClient
     end
 
     def http_post_request(post_body)
-      req = Net::HTTP::Post.new(get_service_uri)
-      req.basic_auth @options[:user], @options[:password]
-      req.content_type = 'application/json'
-      req.body = post_body
+      url = URI.parse "#{@options[:protocol]}://#{@options[:user]}:#{@options[:password]}@#{@options[:host]}:#{@options[:port]}/"
 
-      response = Net::HTTP.start(@options[:host], @options[:port]) {|http| http.request(req) }
+      http = Net::HTTP.new(url.host, url.port)
+      http.use_ssl = (url.scheme == 'https')
+
+      request = Net::HTTP::Post.new(url.path)
+      request.basic_auth url.user, url.password
+      request.content_type = 'application/json'
+      request.body = post_body
+
+      response = http.request(request)
 
       return response if response.class == Net::HTTPOK or response.class == Net::HTTPInternalServerError
       raise DogecoinClient::HTTPError.new(response)
     end
 
     private
-
-    def get_service_uri
-      URI("#{@options[:protocol]}://#{@options[:host]}:#{@options[:port]}").request_uri
-    end
 
     def get_post_body(name, args)
       { method: de_ruby_style(name), params: args, id: Time.now.to_i }.to_json
