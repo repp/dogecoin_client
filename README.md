@@ -4,7 +4,7 @@ DogecoinClient is a gem that makes it easy to work with dogecoin in ruby.
 
 ## Dependencies
 
-The only requirement is a running dogecoin daemon ([dogecoind](https://github.com/dogecoin/dogecoin)). Make sure to check out the [doc section](https://github.com/dogecoin/dogecoin/tree/master-1.5/doc) and follow the instructions for your os.
+The only requirement is a running dogecoin daemon ([dogecoind](https://github.com/dogecoin/dogecoin)). Make sure to check out the [doc section](https://github.com/dogecoin/dogecoin/tree/master/doc) and follow the instructions for your os.
 NOTICE: by default dogecoind will only allow local connections.
 
 ## Installation
